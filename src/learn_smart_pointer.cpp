@@ -5,29 +5,39 @@ class CPointer
 {
 private:
     std::unique_ptr<int[]> data;
+    int m_size;
 public:
-    explicit CPointer(const int size);
-    ~CPointer();
-    void catAddress();
+    explicit CPointer(const int size) : m_size(size) {}
+    ~CPointer() 
+    {
+
+    }
+    void cat();
+    auto move_ptr() -> decltype(data);
 };
 
-CPointer::CPointer(const int size)
+void CPointer::cat()
 {
-    data = std::unique_ptr<int[]>(new int(100));
+    using namespace std;
+    data = std::unique_ptr<int[]> (new int[m_size]);
+
+    for (int i = 0; i < m_size; ++i)
+    {
+        data[i] = i;
+        cout << "data[" << i << "]" << data[i] << endl;
+    }
 }
 
-CPointer::~CPointer()
+auto CPointer::move_ptr() -> decltype(data)
 {
-}
-
-void CPointer::catAddress()
-{
-    std::cout << "data address: " << data.get() << std::endl;
+    return std::move(data);
 }
 
 int main(int argc, char* argv[])
 {
     CPointer cpointer(100);
-    cpointer.catAddress();
+    cpointer.cat();
+    auto ptr = cpointer.move_ptr();
+    std::cout << "move之后" << std::endl << "new ptr[50]=" << ptr[50] << std::endl;
     return 0;
 }
