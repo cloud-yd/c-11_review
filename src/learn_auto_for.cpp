@@ -1,26 +1,30 @@
 #include <iostream>
 #include <vector>
+#include <map>
 
 class CTest
 {
 private:
     int array[5] = {1, 2, 3, 4, 5};
     std::vector<std::string> vec = {"hello", "C++", "11", "auto", "for"};
+    std::map<int, std::string> m_map;
+    using map_pair = std::map<int, std::string>::value_type;
 public:
-    explicit CTest(/* args */);
+    explicit CTest(std::initializer_list<map_pair> init_list);
     ~CTest();
 
     void change();
     void output();
 };
 
-CTest::CTest(/* args */)
+CTest::CTest(std::initializer_list<map_pair> init_list)
 {
     std::cout << "array: " << std::endl;
     for(int a : array)
     {
-        std::cout << a << std::endl;
+        std::cout << a;
     }
+    std::cout << std::endl;
 
     std::cout << "vector: " << std::endl;
     for(auto x : vec)
@@ -28,6 +32,12 @@ CTest::CTest(/* args */)
         std::cout << x << " ";
     }
     std::cout << std::endl;
+
+    std::cout << "初始化m_map" << std::endl;
+    for (auto it : init_list)
+    {
+        m_map.insert(it);
+    }
 }
 
 CTest::~CTest()
@@ -50,12 +60,17 @@ void CTest::output()
         std::cout << x << " ";
     }
     std::cout << std::endl;
+
+    for (auto it : m_map)
+    {
+        std::cout << "{" << it.first << ", " << it.second << "}" << std::endl;
+    }
 }
 
 
 int main(int argc, char* argv[])
 {
-    CTest test;
+    CTest test {{1, "C++"}, {2, "11"}, {3, "真的"}, {4, "好玩"}};
     test.change();
     test.output();
     return 0;

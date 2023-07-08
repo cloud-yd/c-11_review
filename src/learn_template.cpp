@@ -24,7 +24,7 @@ public:
 
     void getInfo();
 };
-
+ 
 template <typename T>
 CPerson<T>::~CPerson()
 {
