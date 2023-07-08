@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+../include/public.h
+iostream
+-
+
 /home/yangd/github/cplusplus11_review/src/learn_auto_for.cpp
 iostream
 -
@@ -13,4 +17,6 @@ vector
 -
 map
 -
+public.h
+/home/yangd/github/cplusplus11_review/src/public.h
 

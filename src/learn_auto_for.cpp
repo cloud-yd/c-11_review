@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include "public.h"
 
 class CTest
 {
@@ -73,5 +74,29 @@ int main(int argc, char* argv[])
     CTest test {{1, "C++"}, {2, "11"}, {3, "真的"}, {4, "好玩"}};
     test.change();
     test.output();
+
+    using namespace CPP;
+
+    for (int i = 0; i <= static_cast<int>(m_enum::max); i++)
+    {
+        switch (i)
+        {
+        case static_cast<int>(m_enum::min):
+            std::cout << "enum class: " << i << "; ";
+            break;
+        case static_cast<int>(m_enum::medium):
+            std::cout << "enum class: " << i << "; ";
+            break;
+        case static_cast<int>(m_enum::max):
+            std::cout << "enum class: " << i << "; ";
+            break;
+
+        default:
+            break;
+        }
+    }
+
+    std::cout << std::endl;
+
     return 0;
 }
