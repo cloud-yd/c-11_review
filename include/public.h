@@ -11,4 +11,4 @@ enum class m_enum
     max
 };
 
-} //namespace YD
+} //namespace CPP
