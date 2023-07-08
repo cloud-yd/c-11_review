@@ -103,7 +103,7 @@ clean: CMakeFiles/learn_auto_for.dir/clean
 CMakeFiles/learn_template.dir/all:
 	$(MAKE) -f CMakeFiles/learn_template.dir/build.make CMakeFiles/learn_template.dir/depend
 	$(MAKE) -f CMakeFiles/learn_template.dir/build.make CMakeFiles/learn_template.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yangd/github/cplusplus11_review/build/CMakeFiles --progress-num=5,6 "Built target learn_template"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yangd/github/cplusplus11_review/build/CMakeFiles --progress-num=7,8 "Built target learn_template"
 .PHONY : CMakeFiles/learn_template.dir/all
 
 # Include target in all.
@@ -130,6 +130,43 @@ CMakeFiles/learn_template.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/learn_template.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/learn_smart_pointer2.dir
+
+# All Build rule for target.
+CMakeFiles/learn_smart_pointer2.dir/all:
+	$(MAKE) -f CMakeFiles/learn_smart_pointer2.dir/build.make CMakeFiles/learn_smart_pointer2.dir/depend
+	$(MAKE) -f CMakeFiles/learn_smart_pointer2.dir/build.make CMakeFiles/learn_smart_pointer2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/yangd/github/cplusplus11_review/build/CMakeFiles --progress-num=5,6 "Built target learn_smart_pointer2"
+.PHONY : CMakeFiles/learn_smart_pointer2.dir/all
+
+# Include target in all.
+all: CMakeFiles/learn_smart_pointer2.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/learn_smart_pointer2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yangd/github/cplusplus11_review/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/learn_smart_pointer2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yangd/github/cplusplus11_review/build/CMakeFiles 0
+.PHONY : CMakeFiles/learn_smart_pointer2.dir/rule
+
+# Convenience name for target.
+learn_smart_pointer2: CMakeFiles/learn_smart_pointer2.dir/rule
+
+.PHONY : learn_smart_pointer2
+
+# clean rule for target.
+CMakeFiles/learn_smart_pointer2.dir/clean:
+	$(MAKE) -f CMakeFiles/learn_smart_pointer2.dir/build.make CMakeFiles/learn_smart_pointer2.dir/clean
+.PHONY : CMakeFiles/learn_smart_pointer2.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/learn_smart_pointer2.dir/clean
 
 .PHONY : clean
 

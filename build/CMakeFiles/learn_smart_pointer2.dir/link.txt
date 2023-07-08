@@ -1,0 +1,1 @@
+/usr/bin/c++    -g -Wall -std=c++11   CMakeFiles/learn_smart_pointer2.dir/src/learn_smart_pointer2.cpp.o  -o ../bin/learn_smart_pointer2 

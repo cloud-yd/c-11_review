@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/yangd/github/cplusplus11_review/src/smart_pointer.cpp" "/home/yangd/github/cplusplus11_review/build/CMakeFiles/smart_pointer.dir/src/smart_pointer.cpp.o"
+  "/home/yangd/github/cplusplus11_review/src/learn_smart_pointer2.cpp" "/home/yangd/github/cplusplus11_review/build/CMakeFiles/learn_smart_pointer2.dir/src/learn_smart_pointer2.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

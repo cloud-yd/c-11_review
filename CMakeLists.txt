@@ -18,6 +18,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 #aux_source_directory(${PROJECT_SOURCE_DIR}/src SRC_LIST)
 set(SRC_LIST
 	learn_smart_pointer
+	learn_smart_pointer2
 	learn_template
 	learn_auto_for)
 

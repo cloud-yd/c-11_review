@@ -137,6 +137,19 @@ learn_template/fast:
 .PHONY : learn_template/fast
 
 #=============================================================================
+# Target rules for targets named learn_smart_pointer2
+
+# Build rule for target.
+learn_smart_pointer2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 learn_smart_pointer2
+.PHONY : learn_smart_pointer2
+
+# fast build rule for target.
+learn_smart_pointer2/fast:
+	$(MAKE) -f CMakeFiles/learn_smart_pointer2.dir/build.make CMakeFiles/learn_smart_pointer2.dir/build
+.PHONY : learn_smart_pointer2/fast
+
+#=============================================================================
 # Target rules for targets named learn_smart_pointer
 
 # Build rule for target.
@@ -203,6 +216,33 @@ src/learn_smart_pointer.cpp.s:
 	$(MAKE) -f CMakeFiles/learn_smart_pointer.dir/build.make CMakeFiles/learn_smart_pointer.dir/src/learn_smart_pointer.cpp.s
 .PHONY : src/learn_smart_pointer.cpp.s
 
+src/learn_smart_pointer2.o: src/learn_smart_pointer2.cpp.o
+
+.PHONY : src/learn_smart_pointer2.o
+
+# target to build an object file
+src/learn_smart_pointer2.cpp.o:
+	$(MAKE) -f CMakeFiles/learn_smart_pointer2.dir/build.make CMakeFiles/learn_smart_pointer2.dir/src/learn_smart_pointer2.cpp.o
+.PHONY : src/learn_smart_pointer2.cpp.o
+
+src/learn_smart_pointer2.i: src/learn_smart_pointer2.cpp.i
+
+.PHONY : src/learn_smart_pointer2.i
+
+# target to preprocess a source file
+src/learn_smart_pointer2.cpp.i:
+	$(MAKE) -f CMakeFiles/learn_smart_pointer2.dir/build.make CMakeFiles/learn_smart_pointer2.dir/src/learn_smart_pointer2.cpp.i
+.PHONY : src/learn_smart_pointer2.cpp.i
+
+src/learn_smart_pointer2.s: src/learn_smart_pointer2.cpp.s
+
+.PHONY : src/learn_smart_pointer2.s
+
+# target to generate assembly for a file
+src/learn_smart_pointer2.cpp.s:
+	$(MAKE) -f CMakeFiles/learn_smart_pointer2.dir/build.make CMakeFiles/learn_smart_pointer2.dir/src/learn_smart_pointer2.cpp.s
+.PHONY : src/learn_smart_pointer2.cpp.s
+
 src/learn_template.o: src/learn_template.cpp.o
 
 .PHONY : src/learn_template.o
@@ -240,6 +280,7 @@ help:
 	@echo "... learn_auto_for"
 	@echo "... rebuild_cache"
 	@echo "... learn_template"
+	@echo "... learn_smart_pointer2"
 	@echo "... learn_smart_pointer"
 	@echo "... src/learn_auto_for.o"
 	@echo "... src/learn_auto_for.i"
@@ -247,6 +288,9 @@ help:
 	@echo "... src/learn_smart_pointer.o"
 	@echo "... src/learn_smart_pointer.i"
 	@echo "... src/learn_smart_pointer.s"
+	@echo "... src/learn_smart_pointer2.o"
+	@echo "... src/learn_smart_pointer2.i"
+	@echo "... src/learn_smart_pointer2.s"
 	@echo "... src/learn_template.o"
 	@echo "... src/learn_template.i"
 	@echo "... src/learn_template.s"

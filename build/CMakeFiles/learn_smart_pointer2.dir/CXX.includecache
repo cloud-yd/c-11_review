@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/yangd/github/cplusplus11_review/src/smart_pointer.cpp
+/home/yangd/github/cplusplus11_review/src/learn_smart_pointer2.cpp
 iostream
 -
 memory
